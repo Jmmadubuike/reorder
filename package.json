@@ -15,6 +15,6 @@
     "check": "node --check site/build.mjs && node --check site/assets/app.js && node --check site/serve.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   }
 }
