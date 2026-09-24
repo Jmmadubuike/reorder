@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reorder social card</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(circle 560px at 84% 76%, rgba(242, 169, 59, 0.22), rgba(242, 169, 59, 0) 70%),
+      linear-gradient(160deg, #06302a 0%, #08423a 55%, #0b5d4f 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 62px 72px 56px;
+  }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand svg { width: 58px; height: 58px; flex: none; }
+  .brand-name { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+  .brand-sub { font-size: 15px; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.02em; }
+  h1 {
+    font-size: 64px;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    max-width: 15ch;
+    margin-bottom: 20px;
+  }
+  .lede { font-size: 25px; line-height: 1.4; color: rgba(255, 255, 255, 0.85); max-width: 26ch; }
+  .loop {
+    display: flex;
+    gap: 11px;
+    flex-wrap: wrap;
+    font-size: 16px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .loop span::after { content: "\2192"; color: #8fd3c2; margin-left: 11px; }
+  .loop span:last-child::after { content: ""; }
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .badge {
+    background: #f2a93b;
+    color: #3a2404;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 11px 20px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="14" fill="#0B5D4F"/>
+      <path d="M18 32a14 14 0 0 1 28 0" fill="none" stroke="#F2A93B" stroke-width="6" stroke-linecap="round"/>
+      <path d="M46 32a14 14 0 0 1-28 0" fill="none" stroke="#8FD3C2" stroke-width="6" stroke-linecap="round"/>
+      <path d="M41 27l5 5-5 5" fill="none" stroke="#F2A93B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M23 37l-5-5 5-5" fill="none" stroke="#8FD3C2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div>
+      <div class="brand-name">Reorder</div>
+      <div class="brand-sub">Restocking infrastructure</div>
+    </div>
+  </div>
+
+  <div>
+    <h1>Stop sending retailers to the market.</h1>
+    <p class="lede">Restock from your daily sales. Delivered to your shop.</p>
+  </div>
+
+  <div>
+    <div class="loop">
+      <span>Sell</span><span>Track</span><span>Detect</span><span>Reorder</span><span>Source</span><span>Deliver</span>
+    </div>
+    <div class="foot">
+      <span>reorder.nexarchtechnologies.com</span>
+      <span class="badge">Nexarch Technologies</span>
+    </div>
+  </div>
+</body>
+</html>

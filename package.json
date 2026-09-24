@@ -1,0 +1,20 @@
+{
+  "name": "reorder-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reorder — documentation and public site for reorder.nexarchtechnologies.com",
+  "scripts": {
+    "build": "node site/build.mjs --surface public",
+    "build:internal": "node site/build.mjs --surface internal",
+    "build:all": "node site/build.mjs --surface public && node site/build.mjs --surface internal --out dist-internal",
+    "serve": "node site/serve.mjs",
+    "serve:internal": "node site/serve.mjs --dir dist-internal",
+    "images": "node site/make-images.mjs",
+    "verify": "node site/verify.mjs --base http://localhost:4321 --label public",
+    "check": "node --check site/build.mjs && node --check site/assets/app.js && node --check site/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
